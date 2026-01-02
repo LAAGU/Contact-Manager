@@ -24,7 +24,14 @@ export default function ContactList({search}: {search: string}) {
   },[fetchContacts])
   
   
-  if (loading) return <div className={`mt-2 text-lg`}>Fetching Contacts...</div>
+  if (loading) return <div className={`flex flex-col w-full items-center`}>
+    <div className={`mt-2 text-lg`}>Fetching Contacts...</div>
+
+      <div className="max-w-[80%] mt-5 text-lg text-yellow-200 bg-black/80 p-2 rounded font-mono">
+  The backend is hosted on a free Render service and may take up to 30–60 seconds
+  to respond on the first request after inactivity. Please wait a moment.
+</div>
+  </div>
   if (!loading && contacts.length === 0) return <div className={`mt-2 text-lg text-red-500`}>No Contacts Found !</div>
 
   return (

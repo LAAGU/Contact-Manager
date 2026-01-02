@@ -21,7 +21,7 @@ const contactSchema = new mongoose.Schema(
       trim: true
     }
   },
-  { timestamps: true }
+  { timestamps: true, versionKey: false }
 )
 
 export default mongoose.model("Contact", contactSchema)

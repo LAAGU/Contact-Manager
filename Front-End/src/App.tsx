@@ -28,6 +28,8 @@ function App() {
     </Button>}
 
   {selectedPage === 1 ? <CreateContact onSubmit={handleOnSubmit}/> : <ContactList search={search}/>}
+
+
   </div>
 
 }
