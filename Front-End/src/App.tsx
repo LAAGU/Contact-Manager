@@ -15,7 +15,7 @@ function App() {
     setSelectedPage(0)
   },[]) 
 
-  return <div className={`flex flex-col items-center w-screen p-10`}>
+  return <div className={`flex flex-col items-center w-screen h-screen p-10`}>
     {selectedPage !== 1 && <div className={`w-full max-w-200 p-4 bg-black/10 flex items-center gap-2 rounded`}>
     <input onChange={(e) => setSearch(e.target.value)} placeholder="Filter by Name..." className={`w-full p-2 text-lg text-black outline-0 border border-black rounded`} type="text" />
     <Button onClick={() => setSelectedPage(1)}>
