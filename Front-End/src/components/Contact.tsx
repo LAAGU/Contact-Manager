@@ -11,7 +11,7 @@ export default function Contact({data,refetch}: {data: ContactType,refetch: () =
 
   return (
     <div className={`w-full flex p-2 border border-black rounded`}>
-        <div className={`flex flex-col w-full p-2`}>
+        <div className={`flex flex-col w-full p-2 max-sm:text-xs`}>
             {Object.entries(data).map(([item,value]) => {
                 if (item === "_id") return null
 
@@ -21,7 +21,7 @@ export default function Contact({data,refetch}: {data: ContactType,refetch: () =
             })}
         </div>
 
-        <Button onClick={() => handleDelete(data._id)} danger>
+        <Button className="max-sm:p-1 max-sm:text-sm" onClick={() => handleDelete(data._id)} danger>
             Delete
         </Button>
     </div>
